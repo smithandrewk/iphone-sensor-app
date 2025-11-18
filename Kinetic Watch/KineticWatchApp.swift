@@ -8,7 +8,7 @@
 import SwiftUI
 
 @main
-struct SensorWatchApp: App {
+struct KineticWatchApp: App {
     @StateObject private var appState = AppState()
     @Environment(\.scenePhase) private var scenePhase
 
@@ -45,14 +45,43 @@ class AppState: ObservableObject {
         // Initialize WatchConnectivity
         _ = WatchConnectivityManager.shared
 
+        // Listen for data collection state changes
+        NotificationCenter.default.addObserver(
+            forName: NSNotification.Name("DataCollectionStateChanged"),
+            object: nil,
+            queue: .main
+        ) { [weak self] notification in
+            guard let self = self,
+                  let userInfo = notification.userInfo,
+                  let enabled = userInfo["enabled"] as? Bool else { return }
+
+            if enabled {
+                print("⌚ Data collection enabled - starting recording")
+                self.motionRecorder.startContinuousRecording()
+            } else {
+                print("⌚ Data collection disabled - processing remaining data then stopping")
+                // Process any remaining unprocessed data before stopping
+                self.motionRecorder.processAndSaveUnprocessedData()
+                self.motionRecorder.stopContinuousRecording()
+                print("⌚ Recording stopped and remaining data saved")
+            }
+        }
+
         // Start continuous recording and process data on first launch
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) { [weak self] in
             guard let self = self else { return }
             if !self.hasLaunched {
                 self.hasLaunched = true
                 print("⌚ SensorWatch app initialized")
-                self.motionRecorder.startContinuousRecording()
-                self.motionRecorder.processAndSaveUnprocessedData()
+
+                // Only start recording if data collection is enabled
+                if WatchConnectivityManager.shared.isDataCollectionEnabled {
+                    self.motionRecorder.startContinuousRecording()
+                    self.motionRecorder.processAndSaveUnprocessedData()
+                } else {
+                    print("⌚ Data collection disabled - not starting recording")
+                }
+
                 self.scheduleBackgroundProcessing()
 
                 // Initial metadata sync
@@ -65,8 +94,12 @@ class AppState: ObservableObject {
     }
 
     func handleAppBecameActive() {
-        // Process and save data when app comes to foreground
-        motionRecorder.processAndSaveUnprocessedData()
+        // Process and save data when app comes to foreground (only if collection enabled)
+        if WatchConnectivityManager.shared.isDataCollectionEnabled {
+            motionRecorder.processAndSaveUnprocessedData()
+        } else {
+            print("⌚ Data collection disabled - skipping processing on app activation")
+        }
 
         // Notify UI to refresh file list
         NotificationCenter.default.post(name: NSNotification.Name("RefreshFileList"), object: nil)
@@ -100,6 +133,12 @@ class AppState: ObservableObject {
         backgroundTaskTimer = Timer.scheduledTimer(withTimeInterval: 30.0, repeats: true) { [weak self] _ in
             guard let self = self else { return }
             print("⏰ Background timer fired - processing data")
+
+            // Only process data if collection is enabled
+            guard WatchConnectivityManager.shared.isDataCollectionEnabled else {
+                print("⏰ Data collection disabled - skipping processing")
+                return
+            }
 
             self.motionRecorder.processAndSaveUnprocessedData()
 

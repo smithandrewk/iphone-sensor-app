@@ -204,6 +204,23 @@ class MotionRecorder {
         }
     }
 
+    /// Stop continuous background recording
+    /// Note: CMSensorRecorder doesn't have an explicit stop method
+    /// We clear the tracking date so recording won't auto-restart
+    func stopContinuousRecording() {
+        DispatchQueue.global(qos: .background).async {
+            print("⌚ Stopping continuous recording on Apple Watch...")
+            // Clear the recording start date so shouldRestartRecording() returns true
+            // This effectively marks recording as stopped
+            UserDefaults.standard.removeObject(forKey: self.recordingStartDateKey)
+            print("   Recording stopped - tracking cleared")
+
+            // Note: CMSensorRecorder doesn't have a stop() method
+            // The recording will naturally expire after its duration (12 hours)
+            // or when the buffer is full. We just stop tracking and processing it.
+        }
+    }
+
     /// Check if we need to restart recording (if >11 hours have passed)
     private func shouldRestartRecording() -> Bool {
         if let recordingStartDate = UserDefaults.standard.object(forKey: recordingStartDateKey) as? Date {

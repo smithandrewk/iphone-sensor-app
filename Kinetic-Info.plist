@@ -4,7 +4,7 @@
 <dict>
 	<key>BGTaskSchedulerPermittedIdentifiers</key>
 	<array>
-		<string>com.andrew.iphone-sensor-app-no-claude.processensordata</string>
+		<string>com.andrew.kinetic.processensordata</string>
 	</array>
 	<key>UIBackgroundModes</key>
 	<array>

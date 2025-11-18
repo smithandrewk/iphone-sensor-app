@@ -9,7 +9,7 @@
 import SwiftUI
 
 @main
-struct iphone_sensor_app_no_claudeApp: App {
+struct KineticApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
 
     var body: some Scene {

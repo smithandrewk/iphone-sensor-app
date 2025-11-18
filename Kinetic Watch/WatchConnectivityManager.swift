@@ -55,6 +55,18 @@ class WatchConnectivityManager: NSObject, ObservableObject {
         }
     }
 
+    // Data collection enabled state (controlled by iPhone)
+    var isDataCollectionEnabled: Bool {
+        get {
+            // Default to true if not set
+            return UserDefaults.standard.object(forKey: "dataCollectionEnabled") as? Bool ?? true
+        }
+        set {
+            UserDefaults.standard.set(newValue, forKey: "dataCollectionEnabled")
+            print("⌚ Data collection \(newValue ? "enabled" : "disabled")")
+        }
+    }
+
     // MARK: - Initialization
 
     private override init() {
@@ -303,6 +315,65 @@ class WatchConnectivityManager: NSObject, ObservableObject {
         processTransferQueue()
     }
 
+    // MARK: - Delete All Files Handler
+
+    private func handleDeleteAllFiles(replyHandler: @escaping ([String : Any]) -> Void) {
+        let motionRecorder = MotionRecorder()
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
+        let allWatchFiles = motionRecorder.getCSVFiles()
+
+        var deletedCount = 0
+        var skippedCount = 0
+
+        print("⌚ Deleting ALL files from watch (except current recording)...")
+        print("⌚ Total files on watch: \(allWatchFiles.count)")
+
+        // Get the last processed date to identify potentially active recording
+        let lastProcessedDateKey = "lastProcessedDate"
+        let lastProcessedDate = UserDefaults.standard.object(forKey: lastProcessedDateKey) as? Date ?? Date.distantPast
+        let currentChunkThreshold = lastProcessedDate.addingTimeInterval(-2 * 60) // 2 minutes buffer
+
+        for watchFile in allWatchFiles {
+            let fileName = watchFile.lastPathComponent
+
+            // Check file modification date to see if it's the current recording
+            do {
+                let attributes = try FileManager.default.attributesOfItem(atPath: watchFile.path)
+                if let modDate = attributes[.modificationDate] as? Date {
+                    // If file was modified recently (within 2 min of last processed date), skip it
+                    if modDate > currentChunkThreshold {
+                        print("⌚ Skipping current recording file: \(fileName) (modified recently)")
+                        skippedCount += 1
+                        continue
+                    }
+                }
+
+                // Delete the file
+                try FileManager.default.removeItem(at: watchFile)
+                print("⌚ Deleted file: \(fileName)")
+                deletedCount += 1
+            } catch {
+                print("❌ Failed to delete \(fileName): \(error)")
+            }
+        }
+
+        // Clear all confirmed transfers and pending deletions
+        confirmedTransfers = []
+        pendingDeletions = [:]
+
+        print("⌚ Deleted \(deletedCount) files, skipped \(skippedCount) active recording(s)")
+
+        // Update metadata after deletion
+        syncFileMetadata()
+
+        // Notify UI to refresh
+        DispatchQueue.main.async {
+            NotificationCenter.default.post(name: NSNotification.Name("RefreshFileList"), object: nil)
+        }
+
+        replyHandler(["deletedCount": deletedCount, "skippedCount": skippedCount, "status": "success"])
+    }
+
     // MARK: - Delete Synced Files Handler
 
     private func handleDeleteSyncedFiles(filesOnIPhone: [String], replyHandler: @escaping ([String : Any]) -> Void) {
@@ -439,6 +510,11 @@ extension WatchConnectivityManager: WCSessionDelegate {
             let filesOnIPhone = message["filesOnIPhone"] as? [String] ?? []
             handleDeleteSyncedFiles(filesOnIPhone: filesOnIPhone, replyHandler: replyHandler)
 
+        case "deleteAllFilesOnWatch":
+            // iPhone requesting to delete ALL files from watch (except current recording)
+            print("⌚ Handling deleteAllFilesOnWatch request")
+            handleDeleteAllFiles(replyHandler: replyHandler)
+
         default:
             replyHandler(["error": "unknown action"])
         }
@@ -461,6 +537,27 @@ extension WatchConnectivityManager: WCSessionDelegate {
         if let action = message["action"] as? String, action == "fileReceived",
            let fileName = message["fileName"] as? String {
             handleFileConfirmation(fileName: fileName)
+        }
+    }
+
+    // MARK: - Receive Application Context
+
+    func session(_ session: WCSession, didReceiveApplicationContext applicationContext: [String : Any]) {
+        print("⌚ Received application context: \(applicationContext)")
+
+        // Handle data collection enabled state from iPhone
+        if let dataCollectionEnabled = applicationContext["dataCollectionEnabled"] as? Bool {
+            DispatchQueue.main.async {
+                self.isDataCollectionEnabled = dataCollectionEnabled
+                print("⌚ Data collection state updated: \(dataCollectionEnabled ? "enabled" : "disabled")")
+
+                // Post notification so AppState can react
+                NotificationCenter.default.post(
+                    name: NSNotification.Name("DataCollectionStateChanged"),
+                    object: nil,
+                    userInfo: ["enabled": dataCollectionEnabled]
+                )
+            }
         }
     }
 }

@@ -7,44 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4907B4F82ECB8BBE00491BD2 /* Sensor Watch App.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		4907B4F82ECB8BBE00491BD2 /* Kinetic Watch.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 4907B4D52ECB8BBD00491BD2 /* Kinetic Watch.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		4907B4E52ECB8BBE00491BD2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4907B4D42ECB8BBD00491BD2;
-			remoteInfo = "Sensor Watch App";
-		};
-		4907B4EF2ECB8BBE00491BD2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 4907B4D42ECB8BBD00491BD2;
-			remoteInfo = "Sensor Watch App";
-		};
 		4907B4F62ECB8BBE00491BD2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 4907B4D42ECB8BBD00491BD2;
-			remoteInfo = "Sensor Watch App";
-		};
-		49A868FF2EC51BDE00F4FD54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49A868ED2EC51BDD00F4FD54;
-			remoteInfo = iphone_sensor_app_no_claude;
-		};
-		49A869092EC51BDE00F4FD54 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 49A868E62EC51BDD00F4FD54 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 49A868ED2EC51BDD00F4FD54;
-			remoteInfo = iphone_sensor_app_no_claude;
+			remoteInfo = "Kinetic Watch";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -55,7 +27,7 @@
 			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
 			dstSubfolderSpec = 16;
 			files = (
-				4907B4F82ECB8BBE00491BD2 /* Sensor Watch App.app in Embed Watch Content */,
+				4907B4F82ECB8BBE00491BD2 /* Kinetic Watch.app in Embed Watch Content */,
 			);
 			name = "Embed Watch Content";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -63,63 +35,25 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sensor Watch App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4907B4E42ECB8BBE00491BD2 /* Sensor Watch AppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sensor Watch AppTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		4907B4EE2ECB8BBE00491BD2 /* Sensor Watch AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sensor Watch AppUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		49A868EE2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iphone_sensor_app_no_claude.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		49A868FE2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphone_sensor_app_no_claudeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		49A869082EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iphone_sensor_app_no_claudeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4907B4D52ECB8BBD00491BD2 /* Kinetic Watch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Kinetic Watch.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		49A868EE2EC51BDD00F4FD54 /* Kinetic.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Kinetic.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		4907B4D62ECB8BBD00491BD2 /* Sensor Watch App */ = {
+		4907B4D62ECB8BBD00491BD2 /* Kinetic Watch */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Sensor Watch App";
+			path = "Kinetic Watch";
 			sourceTree = "<group>";
 		};
-		4907B4E72ECB8BBE00491BD2 /* Sensor Watch AppTests */ = {
+		49A868F02EC51BDD00F4FD54 /* Kinetic */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Sensor Watch AppTests";
-			sourceTree = "<group>";
-		};
-		4907B4F12ECB8BBE00491BD2 /* Sensor Watch AppUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = "Sensor Watch AppUITests";
-			sourceTree = "<group>";
-		};
-		49A868F02EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iphone_sensor_app_no_claude;
-			sourceTree = "<group>";
-		};
-		49A869012EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iphone_sensor_app_no_claudeTests;
-			sourceTree = "<group>";
-		};
-		49A8690B2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = iphone_sensor_app_no_claudeUITests;
+			path = Kinetic;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		4907B4D22ECB8BBD00491BD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4907B4E12ECB8BBE00491BD2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4907B4EB2ECB8BBE00491BD2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -133,32 +67,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		49A868FB2EC51BDE00F4FD54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49A869052EC51BDE00F4FD54 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		49A868E52EC51BDD00F4FD54 = {
 			isa = PBXGroup;
 			children = (
-				49A868F02EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */,
-				49A869012EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */,
-				49A8690B2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */,
-				4907B4D62ECB8BBD00491BD2 /* Sensor Watch App */,
-				4907B4E72ECB8BBE00491BD2 /* Sensor Watch AppTests */,
-				4907B4F12ECB8BBE00491BD2 /* Sensor Watch AppUITests */,
+				49A868F02EC51BDD00F4FD54 /* Kinetic */,
+				4907B4D62ECB8BBD00491BD2 /* Kinetic Watch */,
 				49A868EF2EC51BDD00F4FD54 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -166,12 +82,8 @@
 		49A868EF2EC51BDD00F4FD54 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				49A868EE2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude.app */,
-				49A868FE2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests.xctest */,
-				49A869082EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests.xctest */,
-				4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */,
-				4907B4E42ECB8BBE00491BD2 /* Sensor Watch AppTests.xctest */,
-				4907B4EE2ECB8BBE00491BD2 /* Sensor Watch AppUITests.xctest */,
+				49A868EE2EC51BDD00F4FD54 /* Kinetic.app */,
+				4907B4D52ECB8BBD00491BD2 /* Kinetic Watch.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -179,9 +91,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */ = {
+		4907B4D42ECB8BBD00491BD2 /* Kinetic Watch */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4907B5002ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch App" */;
+			buildConfigurationList = 4907B5002ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Kinetic Watch" */;
 			buildPhases = (
 				4907B4D12ECB8BBD00491BD2 /* Sources */,
 				4907B4D22ECB8BBD00491BD2 /* Frameworks */,
@@ -192,64 +104,18 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				4907B4D62ECB8BBD00491BD2 /* Sensor Watch App */,
+				4907B4D62ECB8BBD00491BD2 /* Kinetic Watch */,
 			);
-			name = "Sensor Watch App";
+			name = "Kinetic Watch";
 			packageProductDependencies = (
 			);
 			productName = "Sensor Watch App";
-			productReference = 4907B4D52ECB8BBD00491BD2 /* Sensor Watch App.app */;
+			productReference = 4907B4D52ECB8BBD00491BD2 /* Kinetic Watch.app */;
 			productType = "com.apple.product-type.application";
 		};
-		4907B4E32ECB8BBE00491BD2 /* Sensor Watch AppTests */ = {
+		49A868ED2EC51BDD00F4FD54 /* Kinetic */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4907B5012ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppTests" */;
-			buildPhases = (
-				4907B4E02ECB8BBE00491BD2 /* Sources */,
-				4907B4E12ECB8BBE00491BD2 /* Frameworks */,
-				4907B4E22ECB8BBE00491BD2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4907B4E62ECB8BBE00491BD2 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4907B4E72ECB8BBE00491BD2 /* Sensor Watch AppTests */,
-			);
-			name = "Sensor Watch AppTests";
-			packageProductDependencies = (
-			);
-			productName = "Sensor Watch AppTests";
-			productReference = 4907B4E42ECB8BBE00491BD2 /* Sensor Watch AppTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		4907B4ED2ECB8BBE00491BD2 /* Sensor Watch AppUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 4907B5022ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppUITests" */;
-			buildPhases = (
-				4907B4EA2ECB8BBE00491BD2 /* Sources */,
-				4907B4EB2ECB8BBE00491BD2 /* Frameworks */,
-				4907B4EC2ECB8BBE00491BD2 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				4907B4F02ECB8BBE00491BD2 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				4907B4F12ECB8BBE00491BD2 /* Sensor Watch AppUITests */,
-			);
-			name = "Sensor Watch AppUITests";
-			packageProductDependencies = (
-			);
-			productName = "Sensor Watch AppUITests";
-			productReference = 4907B4EE2ECB8BBE00491BD2 /* Sensor Watch AppUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
-		49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49A869122EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claude" */;
+			buildConfigurationList = 49A869122EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "Kinetic" */;
 			buildPhases = (
 				49A868EA2EC51BDD00F4FD54 /* Sources */,
 				49A868EB2EC51BDD00F4FD54 /* Frameworks */,
@@ -262,60 +128,14 @@
 				4907B4F72ECB8BBE00491BD2 /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
-				49A868F02EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */,
+				49A868F02EC51BDD00F4FD54 /* Kinetic */,
 			);
-			name = iphone_sensor_app_no_claude;
+			name = Kinetic;
 			packageProductDependencies = (
 			);
 			productName = iphone_sensor_app_no_claude;
-			productReference = 49A868EE2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude.app */;
+			productReference = 49A868EE2EC51BDD00F4FD54 /* Kinetic.app */;
 			productType = "com.apple.product-type.application";
-		};
-		49A868FD2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49A869152EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeTests" */;
-			buildPhases = (
-				49A868FA2EC51BDE00F4FD54 /* Sources */,
-				49A868FB2EC51BDE00F4FD54 /* Frameworks */,
-				49A868FC2EC51BDE00F4FD54 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49A869002EC51BDE00F4FD54 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				49A869012EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */,
-			);
-			name = iphone_sensor_app_no_claudeTests;
-			packageProductDependencies = (
-			);
-			productName = iphone_sensor_app_no_claudeTests;
-			productReference = 49A868FE2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		49A869072EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 49A869182EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeUITests" */;
-			buildPhases = (
-				49A869042EC51BDE00F4FD54 /* Sources */,
-				49A869052EC51BDE00F4FD54 /* Frameworks */,
-				49A869062EC51BDE00F4FD54 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				49A8690A2EC51BDE00F4FD54 /* PBXTargetDependency */,
-			);
-			fileSystemSynchronizedGroups = (
-				49A8690B2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */,
-			);
-			name = iphone_sensor_app_no_claudeUITests;
-			packageProductDependencies = (
-			);
-			productName = iphone_sensor_app_no_claudeUITests;
-			productReference = 49A869082EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
 
@@ -330,28 +150,12 @@
 					4907B4D42ECB8BBD00491BD2 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					4907B4E32ECB8BBE00491BD2 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 4907B4D42ECB8BBD00491BD2;
-					};
-					4907B4ED2ECB8BBE00491BD2 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 4907B4D42ECB8BBD00491BD2;
-					};
 					49A868ED2EC51BDD00F4FD54 = {
 						CreatedOnToolsVersion = 16.2;
 					};
-					49A868FD2EC51BDE00F4FD54 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 49A868ED2EC51BDD00F4FD54;
-					};
-					49A869072EC51BDE00F4FD54 = {
-						CreatedOnToolsVersion = 16.2;
-						TestTargetID = 49A868ED2EC51BDD00F4FD54;
-					};
 				};
 			};
-			buildConfigurationList = 49A868E92EC51BDD00F4FD54 /* Build configuration list for PBXProject "iphone_sensor_app_no_claude" */;
+			buildConfigurationList = 49A868E92EC51BDD00F4FD54 /* Build configuration list for PBXProject "Kinetic" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -365,12 +169,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */,
-				49A868FD2EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeTests */,
-				49A869072EC51BDE00F4FD54 /* iphone_sensor_app_no_claudeUITests */,
-				4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */,
-				4907B4E32ECB8BBE00491BD2 /* Sensor Watch AppTests */,
-				4907B4ED2ECB8BBE00491BD2 /* Sensor Watch AppUITests */,
+				49A868ED2EC51BDD00F4FD54 /* Kinetic */,
+				4907B4D42ECB8BBD00491BD2 /* Kinetic Watch */,
 			);
 		};
 /* End PBXProject section */
@@ -383,35 +183,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4907B4E22ECB8BBE00491BD2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4907B4EC2ECB8BBE00491BD2 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49A868EC2EC51BDD00F4FD54 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49A868FC2EC51BDE00F4FD54 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49A869062EC51BDE00F4FD54 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -428,35 +200,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		4907B4E02ECB8BBE00491BD2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		4907B4EA2ECB8BBE00491BD2 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		49A868EA2EC51BDD00F4FD54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49A868FA2EC51BDE00F4FD54 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		49A869042EC51BDE00F4FD54 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -466,30 +210,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		4907B4E62ECB8BBE00491BD2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */;
-			targetProxy = 4907B4E52ECB8BBE00491BD2 /* PBXContainerItemProxy */;
-		};
-		4907B4F02ECB8BBE00491BD2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */;
-			targetProxy = 4907B4EF2ECB8BBE00491BD2 /* PBXContainerItemProxy */;
-		};
 		4907B4F72ECB8BBE00491BD2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4907B4D42ECB8BBD00491BD2 /* Sensor Watch App */;
+			target = 4907B4D42ECB8BBD00491BD2 /* Kinetic Watch */;
 			targetProxy = 4907B4F62ECB8BBE00491BD2 /* PBXContainerItemProxy */;
-		};
-		49A869002EC51BDE00F4FD54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */;
-			targetProxy = 49A868FF2EC51BDE00F4FD54 /* PBXContainerItemProxy */;
-		};
-		49A8690A2EC51BDE00F4FD54 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 49A868ED2EC51BDD00F4FD54 /* iphone_sensor_app_no_claude */;
-			targetProxy = 49A869092EC51BDE00F4FD54 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -501,21 +225,21 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Sensor Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kinetic Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = LJG5CHZ469;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Sensor-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Sensor;
+				INFOPLIST_FILE = "Kinetic-Watch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Kinetic;
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app continuously records accelerometer data in the background for motion analysis. Data is saved to CSV files on your Apple Watch for later export.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.andrew.iphone-sensor-app-no-claude";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.andrew.kinetic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.kinetic.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
@@ -533,105 +257,27 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"Sensor Watch App/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kinetic Watch/Preview Content\"";
 				DEVELOPMENT_TEAM = LJG5CHZ469;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Sensor-Watch-App-Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = Sensor;
+				INFOPLIST_FILE = "Kinetic-Watch-Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = Kinetic;
 				INFOPLIST_KEY_NSMotionUsageDescription = "This app continuously records accelerometer data in the background for motion analysis. Data is saved to CSV files on your Apple Watch for later export.";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = "com.andrew.iphone-sensor-app-no-claude";
+				INFOPLIST_KEY_WKCompanionAppBundleIdentifier = com.andrew.kinetic;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude.watchkitapp";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.kinetic.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Release;
-		};
-		4907B4FC2ECB8BBE00491BD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensor Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sensor Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Debug;
-		};
-		4907B4FD2ECB8BBE00491BD2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sensor Watch App.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Sensor Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Release;
-		};
-		4907B4FE2ECB8BBE00491BD2 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Sensor Watch App";
-				WATCHOS_DEPLOYMENT_TARGET = 11.2;
-			};
-			name = Debug;
-		};
-		4907B4FF2ECB8BBE00491BD2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.Sensor-Watch-AppUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				TEST_TARGET_NAME = "Sensor Watch App";
 				WATCHOS_DEPLOYMENT_TARGET = 11.2;
 			};
 			name = Release;
@@ -762,11 +408,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iphone_sensor_app_no_claude/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kinetic/Preview Content\"";
 				DEVELOPMENT_TEAM = LJG5CHZ469;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iphone-sensor-app-no-claude-Info.plist";
+				INFOPLIST_FILE = "Kinetic-Info.plist";
 				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect shakes and improve your experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -778,7 +424,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.kinetic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -793,11 +439,11 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_ASSET_PATHS = "\"iphone_sensor_app_no_claude/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"Kinetic/Preview Content\"";
 				DEVELOPMENT_TEAM = LJG5CHZ469;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "iphone-sensor-app-no-claude-Info.plist";
+				INFOPLIST_FILE = "Kinetic-Info.plist";
 				INFOPLIST_KEY_NSMotionUsageDescription = "We use motion data to detect shakes and improve your experience.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -809,7 +455,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claude";
+				PRODUCT_BUNDLE_IDENTIFIER = com.andrew.kinetic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -817,82 +463,10 @@
 			};
 			name = Release;
 		};
-		49A869162EC51BDE00F4FD54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iphone_sensor_app_no_claude.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iphone_sensor_app_no_claude";
-			};
-			name = Debug;
-		};
-		49A869172EC51BDE00F4FD54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				BUNDLE_LOADER = "$(TEST_HOST)";
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/iphone_sensor_app_no_claude.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/iphone_sensor_app_no_claude";
-			};
-			name = Release;
-		};
-		49A869192EC51BDE00F4FD54 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iphone_sensor_app_no_claude;
-			};
-			name = Debug;
-		};
-		49A8691A2EC51BDE00F4FD54 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = LJG5CHZ469;
-				GENERATE_INFOPLIST_FILE = YES;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.andrew.iphone-sensor-app-no-claudeUITests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = iphone_sensor_app_no_claude;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		4907B5002ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch App" */ = {
+		4907B5002ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Kinetic Watch" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4907B4FA2ECB8BBE00491BD2 /* Debug */,
@@ -901,25 +475,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4907B5012ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4907B4FC2ECB8BBE00491BD2 /* Debug */,
-				4907B4FD2ECB8BBE00491BD2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		4907B5022ECB8BBE00491BD2 /* Build configuration list for PBXNativeTarget "Sensor Watch AppUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				4907B4FE2ECB8BBE00491BD2 /* Debug */,
-				4907B4FF2ECB8BBE00491BD2 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49A868E92EC51BDD00F4FD54 /* Build configuration list for PBXProject "iphone_sensor_app_no_claude" */ = {
+		49A868E92EC51BDD00F4FD54 /* Build configuration list for PBXProject "Kinetic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49A869102EC51BDE00F4FD54 /* Debug */,
@@ -928,29 +484,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		49A869122EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claude" */ = {
+		49A869122EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "Kinetic" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				49A869132EC51BDE00F4FD54 /* Debug */,
 				49A869142EC51BDE00F4FD54 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49A869152EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeTests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49A869162EC51BDE00F4FD54 /* Debug */,
-				49A869172EC51BDE00F4FD54 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		49A869182EC51BDE00F4FD54 /* Build configuration list for PBXNativeTarget "iphone_sensor_app_no_claudeUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				49A869192EC51BDE00F4FD54 /* Debug */,
-				49A8691A2EC51BDE00F4FD54 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

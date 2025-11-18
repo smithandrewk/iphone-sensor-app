@@ -38,6 +38,30 @@ class WatchConnectivityManager: NSObject, ObservableObject {
 
     // MARK: - Manual Sync Triggers
 
+    /// Request metadata update from watch (lightweight, doesn't transfer files)
+    func requestMetadataUpdate() {
+        print("📱 Requesting metadata update from watch...")
+
+        guard WCSession.default.activationState == .activated else {
+            print("📱 Session not activated yet")
+            return
+        }
+
+        // The watch automatically sends metadata via application context
+        // We just need to check if there's a context available
+        let context = WCSession.default.receivedApplicationContext
+        if !context.isEmpty {
+            print("📱 Processing available application context")
+            if let availableFilesData = context["availableFiles"] as? [[String: Any]] {
+                DispatchQueue.main.async {
+                    self.updatePendingFiles(from: availableFilesData)
+                }
+            }
+        } else {
+            print("📱 No application context available yet from watch")
+        }
+    }
+
     /// Request files to be synced from watch (when watch is reachable)
     func requestSyncFromWatch() {
         print("📱 Requesting sync from watch...")
@@ -113,6 +137,50 @@ class WatchConnectivityManager: NSObject, ObservableObject {
         }, errorHandler: { error in
             print("❌ Delete request failed: \(error.localizedDescription)")
         })
+    }
+
+    /// Request watch to delete ALL files (except current recording)
+    func requestDeleteAllFilesOnWatch() {
+        print("📱 Requesting watch to delete ALL files (except current recording)...")
+        print("📱 Session state: activated=\(WCSession.default.activationState == .activated), reachable=\(WCSession.default.isReachable)")
+
+        guard WCSession.default.isReachable else {
+            print("📱 Watch not reachable for delete all request")
+            return
+        }
+
+        print("📱 Sending deleteAllFilesOnWatch message to watch...")
+        WCSession.default.sendMessage([
+            "action": "deleteAllFilesOnWatch"
+        ], replyHandler: { reply in
+            print("📱 Received reply from watch: \(reply)")
+            if let deletedCount = reply["deletedCount"] as? Int,
+               let skippedCount = reply["skippedCount"] as? Int {
+                print("📱 Watch deleted \(deletedCount) files, skipped \(skippedCount) active recording(s)")
+            }
+        }, errorHandler: { error in
+            print("❌ Delete all request failed: \(error.localizedDescription)")
+        })
+    }
+
+    /// Send data collection enabled/disabled state to watch
+    func sendDataCollectionState(enabled: Bool) {
+        print("📱 Sending data collection state to watch: \(enabled ? "enabled" : "disabled")")
+
+        guard WCSession.default.activationState == .activated else {
+            print("📱 Session not activated yet")
+            return
+        }
+
+        // Use application context for persistent state (survives app restarts)
+        let context = ["dataCollectionEnabled": enabled]
+
+        do {
+            try WCSession.default.updateApplicationContext(context)
+            print("📱 ✅ Data collection state sent to watch")
+        } catch {
+            print("❌ Failed to send data collection state: \(error)")
+        }
     }
 
     // MARK: - Helper Methods
@@ -309,6 +377,8 @@ extension WatchConnectivityManager: WCSessionDelegate {
         if let availableFilesData = applicationContext["availableFiles"] as? [[String: Any]] {
             DispatchQueue.main.async {
                 self.updatePendingFiles(from: availableFilesData)
+                // Trigger UI refresh after updating pending files
+                NotificationCenter.default.post(name: NSNotification.Name("RefreshFileList"), object: nil)
             }
         }
     }
