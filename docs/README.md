@@ -1,4 +1,4 @@
-# Apple Watch Sensor Recording App
+# Kinetic
 
 ## Overview
 

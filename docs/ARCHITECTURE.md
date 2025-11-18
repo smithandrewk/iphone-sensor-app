@@ -2,7 +2,7 @@
 
 ## System Overview
 
-This document describes the technical architecture of the Apple Watch Sensor Recording App, including data flow, component interactions, and implementation details.
+This document describes the technical architecture of Kinetic, including data flow, component interactions, and implementation details.
 
 ---
 

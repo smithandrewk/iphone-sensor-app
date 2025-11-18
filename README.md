@@ -1,4 +1,4 @@
-# Apple Watch Sensor Recording App
+# Kinetic
 
 Continuous background sensor data recording on Apple Watch with automatic sync to iPhone.
 

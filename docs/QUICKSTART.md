@@ -1,6 +1,6 @@
 # Quick Start Guide
 
-Get started with the Apple Watch Sensor Recording App in 5 minutes.
+Get started with Kinetic in 5 minutes.
 
 ---
 
@@ -23,12 +23,12 @@ git clone https://github.com/smithandrewk/iphone-sensor-app.git
 cd iphone-sensor-app
 
 # Open in Xcode
-open iphone_sensor_app_no_claude.xcodeproj
+open Kinetic.xcodeproj
 
 # Select target and device
-# - Select "iphone_sensor_app_no_claude" scheme → Your iPhone
+# - Select "Kinetic" scheme → Your iPhone
 # - Build and run (Cmd+R)
-# - Select "Sensor Watch App" scheme → Your Apple Watch
+# - Select "Kinetic Watch" scheme → Your Apple Watch
 # - Build and run (Cmd+R)
 ```
 
